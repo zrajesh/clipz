@@ -4,7 +4,7 @@ A short video game play sharing platform for gamers. Upload your best short vide
 
 ## Frontend Tech Stack: 
 - Angular
-- Wen Assembly and Rust for video processing
+- Web Assembly and Rust for video processing
 
 ## Development server
 
