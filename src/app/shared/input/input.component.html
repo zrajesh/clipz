@@ -1,0 +1,47 @@
+<input
+ [formControl]="control"
+ [type]="type" 
+ [placeholder]="placeholder"
+ class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
+ />
+
+<ng-container *ngIf="control.touched && control.dirty">
+    <p
+     *ngIf="control.errors?.required"
+     class="text-red-400"
+    >
+    This field is required
+    </p>
+    <p 
+     *ngIf="control.errors?.minlength" 
+     class="text-red-400"
+    >
+    Enter at least 2 character length
+    </p>
+    <p
+     *ngIf="control.errors?.email"
+     class="text-red-400"
+    >
+    Enter a valid email
+    </p>
+    <p
+     *ngIf="control.errors?.min"
+     class="text-red-400"
+    >
+    Your age should not be below 18
+    </p>
+    <p
+     *ngIf="control.errors?.pattern"
+     class="text-red-400"
+    >
+    Password must be at least 8 characters long, 1 uppercase, 1 lowercase, and 1 number
+    </p>
+    <p
+     *ngIf="control.errors?.maxlength"
+     class="text-red-400"
+    >
+   Phone number must be 10 digits long
+    </p>
+</ng-container>
+
+
