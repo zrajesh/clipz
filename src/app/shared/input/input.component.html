@@ -42,6 +42,18 @@
     >
    Phone number must be 10 digits long
     </p>
+    <p
+     *ngIf="control.errors?.noMatch"
+     class="text-red-400"
+    >
+   Password does not match
+    </p>
+    <p
+     *ngIf="control.errors?.emailTaken"
+     class="text-red-400"
+    >
+   Email is already taken. Please try with a new one
+    </p>
 </ng-container>
 
 
