@@ -6,7 +6,9 @@ A short video game play sharing platform for gamers. Upload your best short vide
 - Angular
 - Web Assembly and Rust for video processing
 
-## Development server
+## Deploy Link
+https://clipz-rajeshiamdev-gmailcom.vercel.app/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
-
+Login Credentials
+email: irajesh@gmail.com
+password: Rajesh12
