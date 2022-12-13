@@ -3,8 +3,15 @@
     <div class="rounded relative flex flex-col">
       <div class="font-bold mb-6">Upload Video</div>
 
-      <!-- Upload Dropbox -->
-      <ng-container *ngIf="!nextStep; else uploadFormCtr">
+      <ng-container>
+        <span *ngIf="!ffmpegService.isReady; else uploadEditorCtrl" class="material-icons text-center text-6xl p-8 animate-spin">
+          settings
+        </span>
+      </ng-container>
+
+      <ng-template #uploadEditorCtrl>
+        <!-- Upload Dropbox -->
+        <ng-container *ngIf="!nextStep; else uploadFormCtr">
         <div
         app-event-blocker
         (dragend)="isDragover = false" 
@@ -22,10 +29,10 @@
         <h5>Drop your file here (mp4 only!)</h5>
         </div>
         <input type="file" class="mt-4" (change)="storeFile($event)">
-      </ng-container>
+        </ng-container>
 
-      <!-- Video Editor -->
-      <ng-template #uploadFormCtr>
+        <!-- Video Editor -->
+        <ng-template #uploadFormCtr>
         <app-alert *ngIf="showAlert" [color]="alertColor">
         <p>{{ alertMsg }}</p>
         <p *ngIf="showPercentage">{{ percentage | percent }}</p>
@@ -64,6 +71,7 @@
             </button>
           </div>
         </form>
+        </ng-template>
       </ng-template>
     </div>
 </section>
