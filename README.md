@@ -7,7 +7,7 @@ A short video game play sharing platform for gamers. Upload your best short vide
 - Web Assembly and Rust for video processing
 
 ## Deploy Link
-https://clipz-rajeshiamdev-gmailcom.vercel.app/
+https://clipz-two.vercel.app
 
 Login Credentials
 email: irajesh@gmail.com
